@@ -2,267 +2,341 @@
 <html lang="id">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Generator Laporan Kegiatan</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generator Laporan Kegiatan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
-  <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-4xl">
-    <h1 class="text-2xl font-bold mb-6 text-center">Form Generator Laporan Kegiatan</h1>
+    <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-4xl">
+        <h1 class="text-2xl font-bold mb-6 text-center">Form Generator Laporan Kegiatan</h1>
 
-    <form id="laporanForm" class="space-y-6">
-      <!-- Tanggal -->
-      <div>
-        <label class="block font-medium">Hari/Tanggal</label>
-        <input type="date" id="tanggal" class="w-full border rounded-lg p-2 mt-1">
-      </div>
-      <div class="border-b border-gray-300 my-4"></div>
+        <form id="laporanForm" class="space-y-6">
+            <!-- Tanggal -->
+            <div>
+                <label class="block font-medium">Hari/Tanggal</label>
+                <input type="date" id="tanggal" class="w-full border rounded-lg p-2 mt-1">
+            </div>
+            <div class="border-b border-gray-300 my-4"></div>
 
-      <!-- Rupam sebelumnya (2 dropdown) -->
-      <div>
-        <label class="block font-medium">Waktu Dinas (Rupam Sebelumnya)</label>
-        <div class="grid grid-cols-2 gap-4 mt-1">
-          <select id="rupamSebelumnya" class="w-full border rounded-lg p-2">
-            <option value="Rupam I">Rupam I</option>
-            <option value="Rupam II">Rupam II</option>
-            <option value="Rupam III">Rupam III</option>
-            <option value="Rupam IV">Rupam IV</option>
-          </select>
-          <select id="rupamWaktuSebelumnya" class="w-full border rounded-lg p-2">
-            <option value="Pagi">Pagi</option>
-            <option value="Siang">Siang</option>
-            <option value="Malam">Malam</option>
-          </select>
-        </div>
-      </div>
+            <!-- Rupam sebelumnya (2 dropdown) -->
+            <div>
+                <label class="block font-medium">Waktu Dinas (Rupam Sebelumnya)</label>
+                <div class="grid grid-cols-2 gap-4 mt-1">
+                    <select id="rupamSebelumnya" class="w-full border rounded-lg p-2">
+                        <option value="Rupam I">Rupam I</option>
+                        <option value="Rupam II">Rupam II</option>
+                        <option value="Rupam III">Rupam III</option>
+                        <option value="Rupam IV">Rupam IV</option>
+                    </select>
+                    <select id="rupamWaktuSebelumnya" class="w-full border rounded-lg p-2">
+                        <option value="Pagi">Pagi</option>
+                        <option value="Siang">Siang</option>
+                        <option value="Malam">Malam</option>
+                    </select>
+                </div>
+            </div>
 
-      <!-- Waktu dinas -->
-      <div>
-        <label class="block font-medium">Waktu Dinas (Rupam Saat Ini)</label>
-        <div class="grid grid-cols-2 gap-4 mt-1">
-          <select id="rupamSekarang" class="w-full border rounded-lg p-2">
-            <option value="Rupam I">Rupam I</option>
-            <option value="Rupam II">Rupam II</option>
-            <option value="Rupam III">Rupam III</option>
-            <option value="Rupam IV">Rupam IV</option>
-          </select>
-          <select id="rupamWaktuSekarang" class="w-full border rounded-lg p-2">
-            <option value="Pagi">Pagi</option>
-            <option value="Siang">Siang</option>
-            <option value="Malam">Malam</option>
-          </select>
-        </div>
-      </div>
-      <div class="border-b border-gray-300 my-4"></div>
+            <!-- Waktu dinas -->
+            <div>
+                <label class="block font-medium">Waktu Dinas (Rupam Saat Ini)</label>
+                <div class="grid grid-cols-2 gap-4 mt-1">
+                    <select id="rupamSekarang" class="w-full border rounded-lg p-2">
+                        <option value="Rupam I">Rupam I</option>
+                        <option value="Rupam II">Rupam II</option>
+                        <option value="Rupam III">Rupam III</option>
+                        <option value="Rupam IV">Rupam IV</option>
+                    </select>
+                    <select id="rupamWaktuSekarang" class="w-full border rounded-lg p-2">
+                        <option value="Pagi">Pagi</option>
+                        <option value="Siang">Siang</option>
+                        <option value="Malam">Malam</option>
+                    </select>
+                </div>
+            </div>
+            <div class="border-b border-gray-300 my-4"></div>
 
-      <!-- Waktu apel (dua kolom) -->
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <label class="block font-medium">Jam Mulai Apel</label>
-          <input type="time" id="jamMulai" class="w-full border rounded-lg p-2 mt-1">
-        </div>
-        <div>
-          <label class="block font-medium">Jam Selesai Apel</label>
-          <input type="time" id="jamSelesai" class="w-full border rounded-lg p-2 mt-1">
-        </div>
-      </div>
-      <div class="border-b border-gray-300 my-4"></div>
+            <!-- Waktu apel (dua kolom) -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block font-medium">Jam Mulai Apel</label>
+                    <input type="time" id="jamMulai" class="w-full border rounded-lg p-2 mt-1">
+                </div>
+                <div>
+                    <label class="block font-medium">Jam Selesai Apel</label>
+                    <input type="time" id="jamSelesai" class="w-full border rounded-lg p-2 mt-1">
+                </div>
+            </div>
+            <div class="border-b border-gray-300 my-4"></div>
 
-      <!-- Detail rupam sebelumnya -->
-      <div class="space-y-2">
-        <div class="my-4">
-          <label class="block font-medium">Perincian Rupam Sebelumnya</label>
-          <p class="text-sm text-gray-600 mt-1">Isi data regu pengamanan yang menerima dinas. (Kosongkan jika tidak ada)</p>
-        </div>
-        <div>
-          <label class="block text-sm">Karupam (Rupam Sebelumnya)</label>
-          <input type="text" id="prevKarupam" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Adam">
-        </div>
-        <div>
-          <label class="block text-sm">Jumlah Personil (Rupam Sebelumnya)</label>
-          <input type="number" id="prevPersonil" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 6">
-        </div>
-        <div>
-          <label class="block text-sm">P2U (Rupam Sebelumnya)</label>
-          <input type="number" id="prevP2U" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 2">
-        </div>
-        <div>
-          <label class="block text-sm">Blok Wanita (Rupam Sebelumnya)</label>
-          <input type="number" id="prevBlokWanita" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 1">
-        </div>
-        <div>
-          <label class="block text-sm">Hadir (Rupam Sebelumnya)</label>
-          <input type="number" id="prevHadir" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 9">
-        </div>
-        <div>
-          <label class="block text-sm">Tidak Hadir (Rupam Sebelumnya)</label>
-          <input type="number" id="prevTidakHadir" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 1">
-        </div>
-        <div>
-          <label class="block text-sm">Keterangan (Rupam Sebelumnya)</label>
-          <input type="text" id="prevKeterangan" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Sakit a.n Bobby">
-        </div>
-      </div>
-      <div class="border-b border-gray-300 my-4"></div>
+            <!-- Detail rupam sebelumnya -->
+            <div class="space-y-2">
+                <div class="my-4">
+                    <label class="block font-medium">Perincian Rupam Sebelumnya</label>
+                    <p class="text-sm text-gray-600 mt-1">Isi data regu pengamanan yang menerima dinas. (Kosongkan jika
+                        tidak ada)</p>
+                </div>
+                <div>
+                    <label class="block text-sm">Karupam (Rupam Sebelumnya)</label>
+                    <input type="text" id="prevKarupam" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: Adam">
+                </div>
+                <div>
+                    <label class="block text-sm">Jumlah Personil (Rupam Sebelumnya)</label>
+                    <input type="number" id="prevPersonil" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: 6">
+                </div>
+                <div>
+                    <label class="block text-sm">P2U (Rupam Sebelumnya)</label>
+                    <input type="number" id="prevP2U" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 2">
+                </div>
+                <div>
+                    <label class="block text-sm">Blok Wanita (Rupam Sebelumnya)</label>
+                    <input type="number" id="prevBlokWanita" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: 1">
+                </div>
+                <div>
+                    <label class="block text-sm">Hadir (Rupam Sebelumnya)</label>
+                    <input type="number" id="prevHadir" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: 9">
+                </div>
+                <div>
+                    <label class="block text-sm">Tidak Hadir (Rupam Sebelumnya)</label>
+                    <input type="number" id="prevTidakHadir" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: 1">
+                </div>
+                <div>
+                    <label class="block text-sm">Keterangan (Rupam Sebelumnya)</label>
+                    <input type="text" id="prevKeterangan" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: Sakit a.n Bobby">
+                </div>
+            </div>
+            <div class="border-b border-gray-300 my-4"></div>
 
-      <!-- Rupam saat ini -->
-      <div class="space-y-2">
-        <div class="my-4">
-          <label class="block font-medium">Perincian Rupam Saat Ini</label>
-          <p class="text-sm text-gray-600 mt-1">Isi data regu pengamanan yang menerima dinas. (Kosongkan jika tidak ada)</p>
-        </div>
-        <div>
-          <label class="block text-sm">Karupam (Rupam Saat Ini)</label>
-          <input type="text" id="currKarupam" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Bobby">
-        </div>
-        <div>
-          <label class="block text-sm">Jumlah Personil (Rupam Saat Ini)</label>
-          <input type="number" id="currPersonil" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 6">
-        </div>
-        <div>
-          <label class="block text-sm">P2U (Rupam Saat Ini)</label>
-          <input type="number" id="currP2U" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 2">
-        </div>
-        <div>
-          <label class="block text-sm">Blok Wanita (Rupam Saat Ini)</label>
-          <input type="number" id="currBlokWanita" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 1">
-        </div>
-        <div>
-          <label class="block text-sm">Hadir (Rupam Saat Ini)</label>
-          <input type="number" id="currHadir" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 9">
-        </div>
-        <div>
-          <label class="block text-sm">Tidak Hadir (Rupam Saat Ini)</label>
-          <input type="number" id="currTidakHadir" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 1">
-        </div>
-        <div>
-          <label class="block text-sm">Keterangan (Rupam Saat Ini)</label>
-          <input type="text" id="currKeterangan" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Sakit a.n Adam">
-        </div>
-      </div>
-      <div class="border-b border-gray-300 my-4"></div>
+            <!-- Rupam saat ini -->
+            <div class="space-y-2">
+                <div class="my-4">
+                    <label class="block font-medium">Perincian Rupam Saat Ini</label>
+                    <p class="text-sm text-gray-600 mt-1">Isi data regu pengamanan yang menerima dinas. (Kosongkan jika
+                        tidak ada)</p>
+                </div>
+                <div>
+                    <label class="block text-sm">Karupam (Rupam Saat Ini)</label>
+                    <input type="text" id="currKarupam" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: Bobby">
+                </div>
+                <div>
+                    <label class="block text-sm">Jumlah Personil (Rupam Saat Ini)</label>
+                    <input type="number" id="currPersonil" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: 6">
+                </div>
+                <div>
+                    <label class="block text-sm">P2U (Rupam Saat Ini)</label>
+                    <input type="number" id="currP2U" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 2">
+                </div>
+                <div>
+                    <label class="block text-sm">Blok Wanita (Rupam Saat Ini)</label>
+                    <input type="number" id="currBlokWanita" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: 1">
+                </div>
+                <div>
+                    <label class="block text-sm">Hadir (Rupam Saat Ini)</label>
+                    <input type="number" id="currHadir" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: 9">
+                </div>
+                <div>
+                    <label class="block text-sm">Tidak Hadir (Rupam Saat Ini)</label>
+                    <input type="number" id="currTidakHadir" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: 1">
+                </div>
+                <div>
+                    <label class="block text-sm">Keterangan (Rupam Saat Ini)</label>
+                    <input type="text" id="currKeterangan" class="w-full border rounded-lg p-2 mt-1"
+                        placeholder="Contoh: Sakit a.n Adam">
+                </div>
+            </div>
+            <div class="border-b border-gray-300 my-4"></div>
 
-      <!-- Petugas -->
-      <div>
-        <label class="block font-medium">Perwira Piket Kontrol</label>
-        <input type="text" id="piketKontrol" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Adam">
-      </div>
-      <div>
-        <label class="block font-medium">Perwira Piket Malam</label>
-        <input type="text" id="piketMalam" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Bobby">
-      </div>
-      <div>
-        <label class="block font-medium">Perbantuan Jaga Malam</label>
-        <input type="text" id="jagaMalam" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Charlie">
-      </div>
-      <div>
-        <label class="block font-medium">Piket Dapur</label>
-        <input type="text" id="piketDapur" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Dodi">
-      </div>
-      <div class="border-b border-gray-300 my-4"></div>
+            <!-- Petugas -->
+            <div>
+                <label class="block font-medium">Perwira Piket Kontrol</label>
+                <input type="text" id="piketKontrol" class="w-full border rounded-lg p-2 mt-1"
+                    placeholder="Contoh: Adam">
+            </div>
+            <div>
+                <label class="block font-medium">Perwira Piket Kontrol Hari Libur</label>
+                <input type="text" id="piketKontrolLibur" class="w-full border rounded-lg p-2 mt-1"
+                    placeholder="Contoh: Andi">
+            </div>
+            <div>
+                <label class="block font-medium">Perwira Piket Malam</label>
+                <input type="text" id="piketMalam" class="w-full border rounded-lg p-2 mt-1"
+                    placeholder="Contoh: Bobby">
+            </div>
+            <div>
+                <label class="block font-medium">Perwira Piket Hari Libur</label>
+                <input type="text" id="piketLibur" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Adam">
+            </div>
+            <div>
+                <label class="block font-medium">Perbantuan Jaga Malam</label>
+                <input type="text" id="jagaMalam" class="w-full border rounded-lg p-2 mt-1"
+                    placeholder="Contoh: Charlie">
+            </div>
+            <div>
+                <label class="block font-medium">Perbantuan Jaga Hari Libur</label>
+                <input type="text" id="jagaLibur" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Adam">
+            </div>
+            <div>
+                <label class="block font-medium">Piket Dapur</label>
+                <input type="text" id="piketDapur" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: Dodi">
+            </div>
+            <div class="border-b border-gray-300 my-4"></div>
 
-      <!-- Isi Lapas -->
-      <div>
-        <label class="block text-sm">Isi Lapas Hari Ini</label>
-        <input type="number" id="isiLapas" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 250">
-      </div>
-      <div>
-        <label class="block text-sm">Jumlah Narapidana</label>
-        <input type="number" id="narapidana" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 250">
-      </div>
-      <div>
-        <label class="block text-sm">Jumlah Tahanan</label>
-        <input type="number" id="tahanan" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 100">
-      </div>
-      <div>
-        <label class="block text-sm">Jumlah di Dalam Lapas</label>
-        <input type="number" id="dalamLapas" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 250">
-      </div>
-      <div>
-        <label class="block text-sm">Jumlah di Luar Lapas</label>
-        <input type="number" id="luarLapas" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 10">
-      </div>
-      <div class="border-b border-gray-300 my-4"></div>
+            <!-- Isi Lapas -->
+            <div>
+                <label class="block text-sm">Isi Lapas Hari Ini</label>
+                <input type="number" id="isiLapas" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 250">
+            </div>
+            <div>
+                <label class="block text-sm">Jumlah Narapidana</label>
+                <input type="number" id="narapidana" class="w-full border rounded-lg p-2 mt-1"
+                    placeholder="Contoh: 250">
+            </div>
+            <div>
+                <label class="block text-sm">Jumlah Tahanan</label>
+                <input type="number" id="tahanan" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 100">
+            </div>
+            <div>
+                <label class="block text-sm">Jumlah di Dalam Lapas</label>
+                <input type="number" id="dalamLapas" class="w-full border rounded-lg p-2 mt-1"
+                    placeholder="Contoh: 250">
+            </div>
+            <div>
+                <label class="block text-sm">Jumlah di Luar Lapas</label>
+                <input type="number" id="luarLapas" class="w-full border rounded-lg p-2 mt-1" placeholder="Contoh: 10">
+            </div>
+            <div>
+                <label class="block text-sm">Keterangan</label>
+                <input type="text" id="keteranganLapas" class="w-full border rounded-lg p-2 mt-1"
+                    placeholder="Contoh: Bon kerja luar a.n Edo">
+            </div>
+            <div class="border-b border-gray-300 my-4"></div>
 
-      <!-- Tombol -->
-      <div>
-        <button type="button" onclick="generateLaporan()"
-          class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Buat Laporan</button>
-      </div>
-    </form>
+            <!-- Tombol -->
+            <div>
+                <button type="button" onclick="generateLaporan()"
+                    class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Buat Laporan</button>
+            </div>
+        </form>
 
-    <!-- Hasil -->
-    <div id="output" class="mt-6 p-4 bg-gray-50 border rounded-lg whitespace-pre-wrap"></div>
-  </div>
+        <!-- Hasil -->
+        <div id="output" class="mt-6 p-4 bg-gray-50 border rounded-lg whitespace-pre-wrap"></div>
+    </div>
 
-  <script>
-    function formatTanggalIndonesia(dateString) {
-      const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-      const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-      const date = dateString ? new Date(dateString + 'T00:00:00') : new Date();
-      if (isNaN(date)) return { withDay: "-", withoutDay: "-" };
-      return {
-        withDay: `${days[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`,
-        withoutDay: `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
-      };
-    }
-    // function capitalizeFirstLetter(s){return s? s.charAt(0).toUpperCase()+s.slice(1):"";}
-    function formatJam(j) { return j ? j.substring(0, 5) : "-"; }
+    <script>
+        function formatTanggalIndonesia(dateString) {
+            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+            const date = dateString ? new Date(dateString + 'T00:00:00') : new Date();
+            if (isNaN(date)) return { withDay: "-", withoutDay: "-" };
+            return {
+                withDay: `${days[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`,
+                withoutDay: `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
+            };
+        }
 
-    function generateLaporan() {
-      function formatOrang(value) {
-        return value && value.trim() !== "" ? value + " Orang" : "-";
-      }
+        // function capitalizeFirstLetter(s){return s? s.charAt(0).toUpperCase()+s.slice(1):"";}
+        function formatJam(j) { return j ? j.substring(0, 5) : "-"; }
 
-      const tanggalVal = document.getElementById("tanggal").value;
-      const rupamSekarang = document.getElementById("rupamSekarang").value;
-      const rupamWaktuSekarang = document.getElementById("rupamWaktuSekarang").value
-      const jamMulai = document.getElementById("jamMulai").value;
-      const jamSelesai = document.getElementById("jamSelesai").value;
+        function generateLaporan() {
+            function formatOrang(value) {
+                return value && value.trim() !== "" ? value + " Orang" : "-";
+            }
 
-      const rupamSebelumnya = document.getElementById("rupamSebelumnya").value;
-      const rupamWaktuSebelumnya = document.getElementById("rupamWaktuSebelumnya").value;
+            function formatPiket(value) {
+                return value !== "" ? value : "";
+            }
 
-      const prevKarupam = document.getElementById("prevKarupam").value || "-";
-      const prevPersonil = formatOrang(document.getElementById("prevPersonil").value);
-      const prevP2U = formatOrang(document.getElementById("prevP2U").value);
-      const prevBlokWanita = formatOrang(document.getElementById("prevBlokWanita").value);
-      const prevHadir = formatOrang(document.getElementById("prevHadir").value);
-      const prevTidakHadir = formatOrang(document.getElementById("prevTidakHadir").value);
-      const prevKeterangan = document.getElementById("prevKeterangan").value || "-";
+            const tanggalVal = document.getElementById("tanggal").value;
+            const rupamSekarang = document.getElementById("rupamSekarang").value;
+            const rupamWaktuSekarang = document.getElementById("rupamWaktuSekarang").value
+            const jamMulai = document.getElementById("jamMulai").value;
+            const jamSelesai = document.getElementById("jamSelesai").value;
 
-      const currKarupam = document.getElementById("currKarupam").value || "-";
-      const currPersonil = formatOrang(document.getElementById("currPersonil").value);
-      const currP2U = formatOrang(document.getElementById("currP2U").value);
-      const currBlokWanita = formatOrang(document.getElementById("currBlokWanita").value);
-      const currHadir = formatOrang(document.getElementById("currHadir").value);
-      const currTidakHadir = formatOrang(document.getElementById("currTidakHadir").value);
-      const currKeterangan = document.getElementById("currKeterangan").value || "-";
+            const rupamSebelumnya = document.getElementById("rupamSebelumnya").value;
+            const rupamWaktuSebelumnya = document.getElementById("rupamWaktuSebelumnya").value;
 
-      const piketKontrol = document.getElementById("piketKontrol").value || "-";
-      const piketMalam = document.getElementById("piketMalam").value || "-";
-      const jagaMalam = document.getElementById("jagaMalam").value || "-";
-      const piketDapur = document.getElementById("piketDapur").value || "-";
+            const prevKarupam = document.getElementById("prevKarupam").value || "-";
+            const prevPersonil = formatOrang(document.getElementById("prevPersonil").value);
+            const prevP2U = formatOrang(document.getElementById("prevP2U").value);
+            const prevBlokWanita = formatOrang(document.getElementById("prevBlokWanita").value);
+            const prevHadir = formatOrang(document.getElementById("prevHadir").value);
+            const prevTidakHadir = formatOrang(document.getElementById("prevTidakHadir").value);
+            const prevKeterangan = document.getElementById("prevKeterangan").value || "-";
 
-      const isiLapas = formatOrang(document.getElementById("isiLapas").value);
-      const narapidana = formatOrang(document.getElementById("narapidana").value);
-      const tahanan = formatOrang(document.getElementById("tahanan").value);
-      const dalamLapas = formatOrang(document.getElementById("dalamLapas").value);
-      const luarLapas = formatOrang(document.getElementById("luarLapas").value);
+            const currKarupam = document.getElementById("currKarupam").value || "-";
+            const currPersonil = formatOrang(document.getElementById("currPersonil").value);
+            const currP2U = formatOrang(document.getElementById("currP2U").value);
+            const currBlokWanita = formatOrang(document.getElementById("currBlokWanita").value);
+            const currHadir = formatOrang(document.getElementById("currHadir").value);
+            const currTidakHadir = formatOrang(document.getElementById("currTidakHadir").value);
+            const currKeterangan = document.getElementById("currKeterangan").value || "-";
 
-      const tanggalObj = formatTanggalIndonesia(tanggalVal);
-      const tanggalFormatted = tanggalObj.withDay;
-      const tanggalTanpaHari = tanggalObj.withoutDay;
-      // const waktuDinasCap=capitalizeFirstLetter(waktuDinas);
-      const jamMulaiFmt = formatJam(jamMulai);
-      const jamSelesaiFmt = formatJam(jamSelesai);
+            const piketKontrol = document.getElementById("piketKontrol").value || "-";
+            const piketMalam = document.getElementById("piketMalam").value || "-";
+            const jagaMalam = document.getElementById("jagaMalam").value || "-";
+            const piketDapur = document.getElementById("piketDapur").value || "-";
 
-      const rupamNow = `${rupamSekarang} (Dinas ${rupamWaktuSekarang})`;
-      const rupamPrev = `${rupamSebelumnya} (Dinas ${rupamWaktuSebelumnya})`;
+            const piketKontrolLibur = document.getElementById("piketKontrolLibur").value;
+            const piketLibur = document.getElementById("piketLibur").value;
+            const jagaLibur = document.getElementById("jagaLibur").value;
 
-      const laporan = `*LAPORAN KEGIATAN*
+            const isiLapas = formatOrang(document.getElementById("isiLapas").value);
+            const narapidana = formatOrang(document.getElementById("narapidana").value);
+            const tahanan = formatOrang(document.getElementById("tahanan").value);
+            const dalamLapas = formatOrang(document.getElementById("dalamLapas").value);
+            const luarLapas = formatOrang(document.getElementById("luarLapas").value);
+            const keteranganLapas = document.getElementById("keteranganLapas").value || "-";
+
+            const tanggalObj = formatTanggalIndonesia(tanggalVal);
+            const tanggalFormatted = tanggalObj.withDay;
+            const tanggalTanpaHari = tanggalObj.withoutDay;
+            // const waktuDinasCap=capitalizeFirstLetter(waktuDinas);
+            const jamMulaiFmt = formatJam(jamMulai);
+            const jamSelesaiFmt = formatJam(jamSelesai);
+
+            const rupamNow = `${rupamSekarang} (Dinas ${rupamWaktuSekarang})`;
+            const rupamPrev = `${rupamSebelumnya} (Dinas ${rupamWaktuSebelumnya})`;
+
+            // 1. Array piket
+            let laporanLines = [];
+
+            // Menambahkan "Perwira Piket Kontrol" dan "Perwira Piket Kontrol Hari Libur"
+            laporanLines.push(`*Perwira Piket Kontrol : ${piketKontrol}*`);
+            if (piketKontrolLibur && piketKontrolLibur.trim() !== "") {
+                laporanLines.push(`*Perwira Piket Kontrol Hari Libur : ${piketKontrolLibur}*`);
+            }
+
+            // Menambahkan "Perwira Piket Malam" dan "Perwira Piket Hari Libur"
+            laporanLines.push(`*Perwira Piket Malam : ${piketMalam}*`);
+            if (piketLibur && piketLibur.trim() !== "") {
+                laporanLines.push(`*Perwira Piket Hari Libur : ${piketLibur}*`);
+            }
+
+            // Menambahkan "Perbantuan Jaga Malam" dan "Perbantuan Jaga Hari Libur"
+            laporanLines.push(`*Perbantuan Jaga Malam : ${jagaMalam}*`);
+            if (jagaLibur && jagaLibur.trim() !== "") {
+                laporanLines.push(`*Perbantuan Jaga Hari Libur : ${jagaLibur}*`);
+            }
+
+            // Menambahkan "Piket Dapur"
+            laporanLines.push(`*Piket Dapur : ${piketDapur}*`);
+
+            // Gabungkan semua baris laporan menjadi satu string
+            const anggotaPiket = laporanLines.join("\n") + "\n";
+
+            const laporan = `*LAPORAN KEGIATAN*
 Kepada Yth:
 Kepala Kantor Wilayah DitjenPas Jawa Barat
 
@@ -292,10 +366,7 @@ Pelaksanaan Astekpam ${rupamWaktuSekarang} Lapas Kelas IIB Purwakarta Dari ${rup
 - Tidak Hadir : ${currTidakHadir}
 - Keterangan  : ${currKeterangan}
 
-*Perwira Piket Kontrol :* ${piketKontrol}
-*Perwira Piket Malam   :* ${piketMalam}
-*Perbantuan Jaga Malam :* ${jagaMalam}
-*Piket Dapur           :* ${piketDapur}
+${anggotaPiket}
 
 4. Isi Lapas:
 - Kapasitas Lapas : 250 Orang
@@ -304,7 +375,7 @@ Pelaksanaan Astekpam ${rupamWaktuSekarang} Lapas Kelas IIB Purwakarta Dari ${rup
 - Tahanan         : ${tahanan}
 - Di dalam Lapas  : ${dalamLapas}
 - Di luar lapas   : ${luarLapas}
-- Keterangan      : -
+- Keterangan      : ${keteranganLapas}
 
 5. Inventaris:
 1) Pepper gun : 2 pucuk
@@ -352,9 +423,9 @@ PLT. Kalapas Kelas IIB Purwakarta
 
 *Benny Muhammad Saefulloh*`
 
-      document.getElementById('output').textContent = laporan;
-    }
-  </script>
+            document.getElementById('output').textContent = laporan;
+        }
+    </script>
 </body>
 
 </html>
